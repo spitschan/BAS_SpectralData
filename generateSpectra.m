@@ -1,5 +1,5 @@
 %% Script to generate spectra from solar elevation
-% Written by Dr. Manuel Spitschan, manuel.spitschan@tuebingen.mpg.de
+% Written by Manuel Spitschan, manuel.spitschan@tuebingen.mpg.de
 %
 % Spitschan M, Aguirre GK, Brainard DH & Sweeney AM (2016). Variation of
 % outdoor illumination as a function of solar elevation and light
@@ -15,9 +15,10 @@ M = csvread('w_CIE3R.csv')
 solarElevationDeg = M(:, 1);
 
 % Extract variables
+wls = wls_CIE3R;
 B = [ones(471, 1) B_CIE3R]; % Add absolute irradiance
 w = M(:, 2:2:end);
 
 % Put it all together
-solarElevationIdx = 1; % Corresponds to -28 deg ec.
-plot(B*w(solarElevationIdx, :)');
+solarElevationIdx = 2; % Corresponds to -26 deg ec.
+plot(wls, B*w(solarElevationIdx, :)');
