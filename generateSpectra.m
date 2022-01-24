@@ -19,5 +19,5 @@ B = [ones(471, 1) B_CIE3R]; % Add absolute irradiance
 w = M(:, 2:2:end);
 
 % Put it all together
-solarElevationIdx = 1; % Corresponds to -28 deg ec.
+solarElevationIdx = 2; % Corresponds to -26 deg ec.
 plot(B*w(solarElevationIdx, :)');
