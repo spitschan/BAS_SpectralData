@@ -21,8 +21,4 @@ w = M(:, 2:2:end);
 
 % Put it all together
 solarElevationIdx = 2; % Corresponds to -26 deg ec.
-<<<<<<< HEAD
 plot(wls, B*w(solarElevationIdx, :)');
-=======
-plot(B*w(solarElevationIdx, :)');
->>>>>>> 816aa3b52a5de7d6bbba7b5d06cd975dad1309e2
